@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+        let arealist = "";
+        let elem = document.createElement("p");
+   	    fetch('http://localhost:8080/AreaList.txt').then(response => response.text())
+            .then(text => {elem.innerText = text;}).catch((e) => console.error(e));
+	    document.body.appendChild(elem);
+    </script>
+</body>
+
+</html>
+
